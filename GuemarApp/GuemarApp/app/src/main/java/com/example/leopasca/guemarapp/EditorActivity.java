@@ -21,14 +21,22 @@ public class EditorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-        ContentResolver cr = context.getContentResolver();
+        ContentResolver cr = getApplicationContext().getContentResolver();
         Uri uri = MediaStore.Files.getContentUri("external");
+        String[] projection = null;
+
+
+        String selection = MediaStore.Files.FileColumns.MEDIA_TYPE + "="+ MediaStore.Files.FileColumns.MEDIA_TYPE_NONE;
+        String[] selectionArgs = null;
+        String sortOrder = null;
+        Cursor allNonMediaFiles = cr.query(uri, projection, selection, selectionArgs, sortOrder);
         String selectionMimeType = MediaStore.Files.FileColumns.MIME_TYPE + "=?";
         String mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension("pdf");
         String[] selectionArgsPdf = new String[]{mimeType};
         Cursor allPdfFiles = cr.query(uri, projection, selectionMimeType, selectionArgsPdf, sortOrder);
     }
-}
+
+
 
 
 

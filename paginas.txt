@@ -1,3 +1,7 @@
 http://www.asp.net/web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
 
 http://stackoverflow.com/questions/10384080/mediastore-uri-to-query-all-types-of-files-media-and-non-media
+
+http://stackoverflow.com/questions/17085574/read-a-pdf-file-from-assets-folder
+
+http://stackoverflow.com/questions/10299839/how-to-read-pdf-in-my-android-application/10352422#10352422
