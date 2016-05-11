@@ -3,7 +3,18 @@
     package="com.example.leopasca.guemarapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <dependency>
+        <groupId>com.joanzapata.pdfview</groupId>
+        <artifactId>android-pdfview</artifactId>
+        <version>1.0.4</version>
+        <type>apklib</type>
+    </dependency>
 
     <application
         android:allowBackup="true"
